@@ -1,7 +1,7 @@
-import { getTodos } from "../models/todo.mjs";
+import { retreiveTodos } from "../models/todo.mjs";
 
 export async function getTodos(req, res) {
-  const todos = await getTodos();
+  const todos = await retreiveTodos();
 
   res.json({ success: true, todos });
 }

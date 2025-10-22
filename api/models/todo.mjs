@@ -1,6 +1,6 @@
 import sql from "../service/db.mjs";
 
-export async function getTodos() {
+export async function retreiveTodos() {
   const todos = await sql`select * from todos`;
   return todos;
 }
