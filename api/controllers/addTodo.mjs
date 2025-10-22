@@ -1,7 +1,7 @@
 import { insertTodo } from "../models/todo.mjs";
 
 export async function addTodo(req, res) {
-  const { todo } = request.body;
+  const { todo } = req.body;
 
   const result = await insertTodo(todo);
 

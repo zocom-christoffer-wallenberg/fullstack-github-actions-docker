@@ -1,7 +1,7 @@
 export function checkBody(req, res, next) {
   const body = req.body;
 
-  if (!body)
+  if (!body?.todo)
     res.status(400).json({
       success: false,
       error: "Invalid body",
