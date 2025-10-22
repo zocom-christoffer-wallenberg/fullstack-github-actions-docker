@@ -1,12 +1,9 @@
+import { insertTodo } from "../models/todo.mjs";
+
 export async function addTodo(req, res) {
   const { todo } = request.body;
 
-  const response = await fetch(process.env.DATABASE, {
-    method: "post",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ todo: todo }),
-  });
-  const data = await response.json();
+  const result = await insertTodo(todo);
 
-  res.send({ success: true, message: "Todo created" });
+  res.send({ success: true, todo: result });
 }

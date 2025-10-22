@@ -1,6 +1,7 @@
-export async function getTodos(req, res) {
-  const response = await fetch(process.env.DATABASE);
-  const data = await response.json();
+import { getTodos } from "../models/todo.mjs";
 
-  res.json({ success: true, todos: data });
+export async function getTodos(req, res) {
+  const todos = await getTodos();
+
+  res.json({ success: true, todos });
 }
