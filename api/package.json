@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./*.js",
     "lint:fix": "eslint --fix ./*.js",
-    "start": "npm run lint:fix && node app.js"
+    "start": "npm run lint:fix && node app.mjs"
   },
   "keywords": [],
   "author": "",
