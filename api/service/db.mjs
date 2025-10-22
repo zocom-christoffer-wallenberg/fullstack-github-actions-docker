@@ -5,7 +5,7 @@ export async function initDb() {
     CREATE TABLE IF NOT EXISTS todos (
       id SERIAL PRIMARY KEY,
       title TEXT NOT NULL,
-      done BOOLEAN DEFAULT FALSE
+      done BOOLEAN DEFAULT FALSE,
       created_at TIMESTAMP DEFAULT NOW()
     );
   `;
