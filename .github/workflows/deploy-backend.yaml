@@ -20,6 +20,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
+        working-directory: /api
         run: |
           docker build -t zocomchristoffer/test-api .
 
